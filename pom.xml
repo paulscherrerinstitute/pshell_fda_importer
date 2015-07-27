@@ -22,22 +22,24 @@
             <groupId>ch.psi.fda</groupId>
             <artifactId>ch.psi.fda.xscan</artifactId>
             <version>2.3.10</version>
-        </dependency>                          
+        </dependency>     
+                             
     </dependencies>
     <build>
         <plugins>  
-            <!-- Generate jar with dependencies             -->           
+<!--             Generate jar with dependencies                          -->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>ch.psi.pshell.plot.Test</mainClass>
-                        </manifest>                        
-                    </archive>
+                    <descriptors>
+                        <descriptor>src/main/assembly/src.xml</descriptor>
+                    </descriptors>                    
+                         <!-- 
                      <descriptorRefs>
-                      <descriptorRef>jar-with-dependencies</descriptorRef>
+                      <descriptorRef>jar-with-dependencies</descriptorRef>  
+                       <descriptorRef>jar-with-dependencies</descriptorRef>  
                     </descriptorRefs>  
+                    -->
                 </configuration>
                 
                 <executions>
@@ -49,8 +51,8 @@
                     </goals>
                     </execution>
                 </executions>      
-            </plugin>
+            </plugin>           
         </plugins>                       
     </build>
-    
+        
 </project>
