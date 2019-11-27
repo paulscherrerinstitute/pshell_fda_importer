@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ch.psi</groupId>
     <artifactId>importerFDA</artifactId>
-    <version>1.12.0</version>
+    <version>1.13.0</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,13 +18,14 @@
             <version>${project.version}</version>
             <scope>provided</scope>            
         </dependency>
+          <!-- 
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>FDA</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>            
         </dependency>        
-        <!-- 
+      
         <dependency>
             <groupId>ch.psi.fda</groupId>
             <artifactId>ch.psi.fda.xscan</artifactId>
@@ -48,8 +49,37 @@
         <groupId>com.sun.xml.bind</groupId>
         <artifactId>jaxb-core</artifactId>
         <version>2.3.0</version>
-    </dependency>        
+        
+     </dependency>   
+        <!--      
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>      
+        --> 
     </dependencies>
+    
+    <repositories>        
+        <repository>
+          <id>jcenter</id>
+          <name>jcenter</name>
+          <url>https://jcenter.bintray.com/</url>
+        </repository>  
+            
+         <repository>   
+          <id>imagej</id>
+          <name>imagej</name>
+          <url>http://maven.imagej.net/content/repositories/public</url>
+        </repository>        
+
+         <repository>  
+          <id>bintray-hltools</id>
+          <name>bintray</name>
+          <url>https://dl.bintray.com/paulscherrerinstitute/hltools</url>
+        </repository> 
+     </repositories>   
+         
     <build>
         <plugins>  
 <!--             Generate jar with dependencies                          -->
@@ -77,7 +107,7 @@
                     </execution>
                 </executions>      
             </plugin>           
-        </plugins>                       
+        </plugins>  
     </build>
-        
+
 </project>
